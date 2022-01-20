@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Finding Visualizer</title>
+    <script src="https://kit.fontawesome.com/21f21271e8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-center">
+            <div class="logo">
+                <h1>Path Finding Visualizer</h1>
+            </div>
+            <div class="btn-container">
+                <button>
+                    <a href="https://mehrdadmoradii.github.io/sort-visualizer/">sort visualizer</a>
+                </button>
+                <button id="generate-graph-btn">generate new graph <i class="fas fa-sync"></i></button>
+                <div class="algorithm-selector-container">
+                    <label for="algorithms">Choose an Algorithm:</label>
+                    <select name="algorithms" id="algorithm-selector" >
+                      <optgroup label="Uninformed">
+                        <option value="bfs">Breadth-first search</option>
+                        <option value="dfs">Depth-first search</option>
+                        <option value="dijkstra">Dijkstra's algorithm</option>
+                      </optgroup>
+                      <optgroup label="informed">
+                        <option value="greedy">Greedy best-first search</option>
+                        <option value="astar">A<sup>*</sup></option>
+                      </optgroup>
+                    </select>
+                    <button id="algorithm-selector-btn">
+                        Start Visualizing <i class="fas fa-play-circle"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+      
+    <main>
+            <div id="content">
+                <svg width="100%" height="100%">
+                  <g class="links"></g>
+                  <g class="nodes"></g>
+                </svg>
+            </div>
+    </main>  
+
+    <script src = "https://d3js.org/d3.v5.min.js"></script>    
+    <script src = "./graph.js"></script>
+    <script src = "./lib/StackFrontier.js"></script>
+    <script src = "./lib/QueueFrontier.js"></script>
+    <script src = "./lib/GraphNode.js"></script>
+    <script src = "./lib/PriorityQueue.js"></script>
+
+</body>
+</html>
